@@ -1,0 +1,7 @@
+// any styling required *before* the app bootstraps should go in here
+
+.app__loading {
+  padding-top: 50vh;
+  text-align: center;
+  transfrom: translateY(-50%);
+}

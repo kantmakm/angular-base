@@ -1,0 +1,13 @@
+<header class="container">
+  <div>
+    <a [routerLink]="['']" title="Spire Digital">
+      <img src="/img/spiredigital.svg" alt="Spire Digital" title="Spire Digital">
+    </a>
+  </div>
+  <button (click)="openMenu()">{{open ? 'Close' : 'Open'}} Menu</button>
+  <nav [hidden]="!open">
+    <a [routerLink]="['']">Home</a>
+    <a [routerLink]="['hello-world']">Hello World</a>
+    <a [routerLink]="['broken-link']">Broken Link</a>
+  </nav>
+</header>

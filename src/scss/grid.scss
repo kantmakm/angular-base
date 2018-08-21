@@ -1,0 +1,44 @@
+@import '~bourbon-neat/core/neat';
+
+// visualize grid
+$visualize_grid: false;
+
+$gutter_width: 1rem;
+$gutter_width_wide: 2rem;
+
+$neat-grid: (
+  columns: 4,
+  gutter: $gutter_width,
+);
+$tablet: (
+  columns: 8,
+  gutter: $gutter_width,
+  media: 600px,
+);
+$desktop: (
+  columns: 12,
+  gutter: 1rem,
+  media: 840px,
+);
+$desktop-wide: (
+  columns: 12,
+  gutter: $gutter_width_wide,
+  media: 1440px,
+);
+
+// visualize grid
+@if ($visualize_grid) {
+  .container {
+    @include grid-visual;
+
+    @include grid-media($tablet) {
+      @include grid-visual;
+    }
+    @include grid-media($desktop) {
+      @include grid-visual;
+    }
+    @include grid-media($desktop-wide) {
+      @include grid-visual;
+    }
+  }
+}
